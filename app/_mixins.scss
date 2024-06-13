@@ -1,0 +1,52 @@
+@mixin flexRegular($direction, $space) {
+  display: flex;
+  justify-content: $space;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin gridRegular($gap) {
+  display: grid;
+  gap: $gap;
+}
+@mixin btnRegular($width) {
+  background: linear-gradient(
+    90deg,
+    #21eea3 0%,
+    #21e6aa 6%,
+    #23d1be 16%,
+    #25afdd 28%,
+    #278aff 39%,
+    #4576fd 54%,
+    #9044f9 86%,
+    #b42cf7 100%
+  );
+  color: #fff;
+  background-size: 110% 110%; // for the gradient positioning
+  background-position: left; // for the grps
+  //font-family: "Inter";
+  box-sizing: border-box;
+  width: $width;
+  height: 48px;
+  outline: none;
+  border: 0;
+  border-radius: 100px;
+  //   font-size: 0.9em;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    // background: linear-gradient(
+    //   90deg,
+    //   #b42cf7 0%,
+    //   #9044f9 14%,
+    //   #4576fd 46%,
+    //   #278aff 61%,
+    //   #25afdd 72%,
+    //   #23d1be 84%,
+    //   #21e6aa 94%,
+    //   #21eea3 100%
+    // ); // rm for gr ps
+    background-position: right;
+    background-size: 160% 160%;
+    transform: scale(1.01);
+  }
+}

@@ -1,0 +1,12 @@
+@import "../mixins";
+
+.hero {
+  padding: 8em auto 2em auto;
+  border: 1px solid #fff;
+}
+.heroTxt {
+  text-align: center;
+  h1 {
+    font-size: 3em;
+  }
+}
