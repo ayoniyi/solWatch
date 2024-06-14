@@ -39,3 +39,26 @@
   color: #cbcbcbd0;
   font-size: 0.89em;
 }
+
+@media (max-width: 1024px) {
+  .content {
+    width: 98%;
+  }
+}
+@media (max-width: 820px) {
+  .container {
+    @include flexRegular(column, center);
+  }
+  .footerTxt {
+    @include flexRegular(column, center);
+  }
+  .links,
+  .logoBx {
+    margin-bottom: 3em;
+  }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
+  }
+}
