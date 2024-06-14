@@ -87,8 +87,8 @@ const HomePage = () => {
                 opacity: 1,
               }}
               viewport={{
-                //amount: "all",
-                margin: "-200px",
+                amount: "all",
+                //margin: "-200px",
               }}
               className={style.heroDesc}
 
@@ -118,10 +118,10 @@ const HomePage = () => {
                   duration: 0.5,
                 },
               }}
-              viewport={{
-                //amount: "all",
-                margin: "-200px",
-              }}
+              // viewport={{
+              //   amount: "all",
+              //   //margin: "-200px",
+              // }}
             >
               <Image src={design} alt="Elegant design" placeholder="blur" />
             </motion.div>
@@ -138,10 +138,10 @@ const HomePage = () => {
                   duration: 0.5,
                 },
               }}
-              viewport={{
-                //amount: "all",
-                margin: "-200px",
-              }}
+              // viewport={{
+              //   amount: "all",
+              //   //margin: "-200px",
+              // }}
             >
               <h2>Innovation of Crypto Hardware</h2>
               <p>
