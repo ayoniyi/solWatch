@@ -1,9 +1,10 @@
-import React from "react";
+"use client";
+
 import style from "./Home.module.scss";
 import Image from "next/image";
 
 import heroImg from "./assets/heroImg.png";
-import design from "./assets/design.png";
+import design from "./assets/watch.png";
 import Needs from "./assets/all.png";
 import Explore from "./assets/explore.png";
 import Specs from "./assets/specs.png";
@@ -21,20 +22,78 @@ import Lines from "./assets/sublines.png";
 import Subscribe from "./assets/subscribe.png";
 import Mail from "./assets/mail.svg";
 import NeedsToggle from "../components/NeedsToggle/Needs";
+import { motion } from "framer-motion";
+import AOS from "aos";
+import { useEffect } from "react";
+
 const HomePage = () => {
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <>
       <div className={style.container}>
         <div className={style.content}>
           <div className={style.hero}>
-            <div className={style.heroTxt}>
+            <motion.div
+              className={style.heroTxt}
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    delay: 0.5,
+                    duration: 1,
+                  },
+                },
+              }}
+            >
               <h1>Solana Watch</h1>
               <p>The First AI Wearables of Crypto</p>
-            </div>
-            <div className={style.heroImg}>
+            </motion.div>
+            <motion.div
+              className={style.heroImg}
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {
+                  scale: 0.5,
+                  opacity: 0,
+                  y: 200,
+                },
+                visible: {
+                  scale: 1,
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 1.5,
+                    duration: 0.7,
+                  },
+                },
+              }}
+            >
               <Image src={heroImg} alt="Solana Watch" placeholder="blur" />
-            </div>
-            <div className={style.heroDesc}>
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: 1,
+              }}
+              viewport={{
+                //amount: "all",
+                margin: "-200px",
+              }}
+              className={style.heroDesc}
+
+              //data-aos-offset="500"
+            >
               <p>
                 Introducing the Solana Watch — a cutting-edge timepiece designed
                 to seamlessly blend advanced technology with sophisticated
@@ -42,14 +101,48 @@ const HomePage = () => {
                 fashion with advanced technology, reflecting the innovation and
                 speed of the Solana blockchain.{" "}
               </p>
-            </div>
+            </motion.div>
           </div>
 
           <div className={style.design}>
-            <div className={style.designImg}>
+            <motion.div
+              className={style.designImg}
+              initial={{
+                x: -300,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              viewport={{
+                //amount: "all",
+                margin: "-200px",
+              }}
+            >
               <Image src={design} alt="Elegant design" placeholder="blur" />
-            </div>
-            <div className={style.designTxt}>
+            </motion.div>
+            <motion.div
+              className={style.designTxt}
+              initial={{
+                x: 300,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              viewport={{
+                //amount: "all",
+                margin: "-200px",
+              }}
+            >
               <h2>Innovation of Crypto Hardware</h2>
               <p>
                 Solana Watch is a wearable AI device of crypto. It combines
@@ -57,7 +150,7 @@ const HomePage = () => {
                 swiftly conduct various transactions anytime, anywhere through
                 AI technology, reflecting the innovation and speed of web3.
               </p>
-            </div>
+            </motion.div>
           </div>
 
           <div className={style.needs}>

@@ -102,21 +102,22 @@
   background: #1f1f1f;
   @include flexRegular(row, flex-start);
   position: relative;
-  padding: 3em 0;
+  //padding: 3em 0;
 }
 .designImg {
-  position: absolute;
+  //position: absolute;
   img {
     width: 100%;
-    width: 1320px;
+    //width: 1320px;
+    transform: scale(1.25);
   }
   width: 45%;
   //border: 1px solid #fff;
 }
 .designTxt {
   width: 65%;
-
-  margin-left: 40%;
+  padding: 2em 0;
+  //margin-left: 40%;
   h2 {
     font-size: 3.6em;
     font-family: "Inter";

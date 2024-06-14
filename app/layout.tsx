@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Favicon from "@/public/favicon.ico";
 import "./globals.css";
 import "./ham.css";
+import "aos/dist/aos.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
