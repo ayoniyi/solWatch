@@ -1,0 +1,41 @@
+@import "../../mixins";
+
+.container {
+  background: #131214;
+  padding: 3em 0;
+}
+.content {
+  width: 88%;
+  margin: 1em auto;
+}
+.footerTxt {
+  @include flexRegular(row, space-between);
+}
+.links,
+.logoBx,
+.socials {
+  @include flexRegular(row, flex-start);
+}
+.links {
+  a {
+    font-family: "Inter";
+    color: #ffffffcf;
+    &:nth-child(2) {
+      margin: 0 2em;
+    }
+  }
+}
+
+.logoBx {
+  p {
+    font-family: "Inter";
+    font-size: 2.75em;
+    margin-left: 0.8em;
+  }
+}
+
+.copyright {
+  margin-top: 3.1em;
+  color: #cbcbcbd0;
+  font-size: 0.89em;
+}

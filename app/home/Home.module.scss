@@ -1,12 +1,341 @@
 @import "../mixins";
 
+// hero
 .hero {
-  padding: 8em auto 2em auto;
-  border: 1px solid #fff;
+  padding-top: 10em;
+  @include flexRegular(column, center);
 }
 .heroTxt {
   text-align: center;
   h1 {
-    font-size: 3em;
+    font-size: 8em;
+    border: 0;
+    //font-size: 128px;
+    font-family: "Inter";
+    font-weight: 900;
+    color: #b8b8b8;
+  }
+  p {
+    background: linear-gradient(
+      90deg,
+      #21eea3 0%,
+      #21e6aa 6%,
+      #23d1be 16%,
+      #25afdd 28%,
+      #278aff 39%,
+      #4576fd 54%,
+      #9044f9 86%,
+      #b42cf7 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    // border: 1px solid #fff;
+    width: 50%;
+    margin: auto;
+    font-size: 1.5em;
+  }
+}
+.heroImg {
+  @include flexRegular(column, center);
+  img {
+    margin-top: -50px;
+    //border: 1px solid #fff;
+    width: 93%;
+    max-width: 1360px;
+  }
+}
+.heroDesc {
+  width: 75%;
+  margin: 4em auto;
+  text-align: center;
+  p {
+    font-weight: normal;
+    color: #b8b8b8d0;
+    font-size: 1.48em;
+  }
+}
+@media (max-width: 820px) {
+  .hero {
+    h1 {
+      // line-height: 30px;
+      font-size: 6.9em;
+    }
+  }
+  .heroDesc {
+    width: 80%;
+  }
+}
+@media (max-width: 430px) {
+  .hero {
+    padding-top: 6em;
+    h1 {
+      font-size: 4em;
+      //border: 1px solid #fff;
+      //line-height: 40px;
+    }
+    p {
+      margin: 2em auto;
+      width: 75%;
+    }
+  }
+  .heroImg {
+    img {
+      margin-top: -10px;
+      width: 100%;
+    }
+  }
+  .heroDesc {
+    width: 95%;
+    //border: 1px solid #fff;
+    p {
+      font-size: 1.28em;
+      width: 100%;
+    }
+  }
+}
+
+// design div
+.design {
+  //border: 1px solid #fff;
+  background: #1f1f1f;
+}
+.designImg {
+  img {
+    width: 100%;
+    max-width: 720px;
+  }
+}
+
+//needs div
+.needs {
+  background: #000;
+}
+.needsContent {
+  @include flexRegular(column, center);
+  padding: 4em 0;
+  width: 95%;
+  margin: auto;
+  h2 {
+    font-size: 3.6em;
+    font-family: "Inter";
+    font-weight: 600;
+    text-align: center;
+    span {
+      background: linear-gradient(
+        90deg,
+        #21eea3 0%,
+        #21e6aa 6%,
+        #23d1be 16%,
+        #25afdd 28%,
+        #278aff 39%,
+        #4576fd 54%,
+        #9044f9 86%,
+        #b42cf7 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+
+      margin: 1em auto;
+    }
+  }
+}
+.needsImg {
+  img {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 1em;
+  }
+}
+
+//explore div
+.exploreContent {
+  @include flexRegular(column, center);
+  padding: 4em 0;
+  width: 95%;
+  margin: auto;
+  h2 {
+    font-size: 3.6em;
+    font-family: "Inter";
+    font-weight: 600;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    max-width: 1300px;
+    margin-top: -9em;
+  }
+}
+
+//specs div
+.specsContent {
+  padding: 2em 0;
+  width: 95%;
+  margin: auto;
+  position: relative;
+  // @include flexRegular(column, center);
+  .specTitle {
+    width: 88%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  h2 {
+    // margin-left: 5%;
+    font-size: 3.6em;
+    font-family: "Inter";
+    font-weight: 600;
+  }
+}
+.specImg {
+  @include flexRegular(column, center);
+  position: relative;
+  min-height: 500px;
+
+  img {
+    position: absolute;
+    //margin-top: -20em;
+    width: 100%;
+    max-width: 1290px;
+  }
+}
+.specRows {
+  width: 88%;
+  margin: auto;
+}
+.specRowA {
+  @include gridRegular(1.5%);
+  grid-template-columns: repeat(4, 23.5%);
+  justify-content: center;
+  margin: 3em 0 0.3em 0;
+  z-index: 1;
+}
+.specRowB {
+  @include gridRegular(1.5%);
+  justify-content: center;
+  margin: 1em 0 2em 0;
+  grid-template-columns: 36% 24% 36%;
+}
+.specA {
+  position: relative;
+  padding: 1.6em 0 5.5em 0;
+  border-radius: 16px;
+  background: linear-gradient(#1e1e1e, #1e1e1e) padding-box,
+    linear-gradient(to left, #616e9f8a, #ffffff5c, #0504046f) border-box,
+    linear-gradient(to top, #ffffff77, #0938df, #0000001c) border-box;
+  background-image: linear-gradient(rgb(30, 30, 30), rgb(30, 30, 30)),
+    linear-gradient(
+      to left,
+      rgba(97, 110, 159, 0.54),
+      rgba(255, 255, 255, 0.308),
+      rgba(5, 4, 4, 0.435)
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.401),
+      rgb(9, 56, 223),
+      rgba(0, 0, 0, 0.11)
+    );
+  border: 1px solid #ffffff1a;
+  @include flexRegular(column, center);
+  p {
+    margin-top: 1em;
+  }
+  span {
+    color: #ababab;
+  }
+}
+.specTxt {
+  text-align: center;
+  position: absolute;
+  bottom: 1.4em;
+}
+
+//future div
+.future {
+  background: #1f1f1f;
+  padding: 1.5em 0;
+}
+.fImg {
+  img {
+    width: 100%;
+    max-width: 1190px;
+  }
+}
+.fTxt {
+  margin: 1.5em 0;
+  text-align: center;
+  h2 {
+    font-size: 3.6em;
+    font-family: "Inter";
+    font-weight: 600;
+  }
+  button {
+    margin: 1em 0;
+    @include btnRegular(12vw);
+    min-width: 200px;
+    max-width: 300px;
+  }
+}
+
+//subscribe div
+.subscribe {
+  padding: 2em 0 1em 0;
+  position: relative;
+}
+.subLines {
+  position: absolute;
+  z-index: -1;
+  img {
+    width: 100%;
+    max-width: 2942px;
+  }
+}
+.subscribeContent {
+  z-index: 2;
+  @include flexRegular(column, center);
+  h2 {
+    font-size: 3.8em;
+    font-family: "Inter";
+    font-weight: 600;
+    width: 62%;
+    text-align: center;
+  }
+}
+.subscribeBx {
+  position: absolute;
+  bottom: 6.5em;
+  width: 100%;
+
+  input {
+    border-radius: 13px;
+    //
+    border: 1.5px solid #fff;
+    background: #ffffff19;
+    backdrop-filter: blur(10px);
+    height: 76px;
+    width: 83%;
+    outline: none;
+    padding-left: 2.8em;
+  }
+  button {
+    @include btnRegular(15%);
+    height: 76px;
+    // min-width: 100px;
+    // max-width: 200px;
+  }
+}
+.subscribeFields {
+  width: 68%;
+  position: relative;
+  margin: auto;
+  //border: 1px solid #fff;
+  @include flexRegular(row, space-between);
+  img {
+    position: absolute;
+    z-index: 2;
+    left: 0.9em;
   }
 }
