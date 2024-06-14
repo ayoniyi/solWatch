@@ -71,8 +71,9 @@ const HomePage = () => {
                   opacity: 1,
                   y: 0,
                   transition: {
+                    type: "spring",
                     delay: 1.5,
-                    duration: 0.7,
+                    duration: 1.3,
                   },
                 },
               }}
@@ -155,12 +156,36 @@ const HomePage = () => {
 
           <div className={style.needs}>
             <div className={style.needsContent}>
-              <h2>
+              <motion.h2
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                  },
+                }}
+              >
                 All Your <span>Crypto</span> Needs Only One Watch
-              </h2>
-              <div className={style.needsImg}>
+              </motion.h2>
+              <motion.div
+                className={style.needsImg}
+                initial={{
+                  scale: 0.7,
+                  opacity: 0,
+                }}
+                whileInView={{
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    type: "spring",
+                    duration: 1,
+                  },
+                }}
+              >
                 <Image src={Needs} alt="all your needs" placeholder="blur" />
-              </div>
+              </motion.div>
               {/* <NeedsToggle /> */}
               <NeedsT />
             </div>
@@ -168,21 +193,88 @@ const HomePage = () => {
 
           <div className={style.explore}>
             <div className={style.exploreContent}>
-              <h2>Explore More Experiences</h2>
-              <Image src={Explore} alt="explore" placeholder="blur" />
+              <motion.h2
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                  },
+                }}
+              >
+                Explore More Experiences
+              </motion.h2>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: -170,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    type: "spring",
+                    duration: 1.1,
+                  },
+                }}
+              >
+                <Image src={Explore} alt="explore" placeholder="blur" />
+              </motion.div>
             </div>
           </div>
 
           <div className={style.specs}>
             <div className={style.specsContent}>
               <div className={style.specTitle}>
-                <h2>Specs</h2>
+                <motion.h2
+                  initial={{
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    transition: {
+                      duration: 0.5,
+                    },
+                  }}
+                >
+                  Specs
+                </motion.h2>
               </div>
 
-              <div className={style.specImg}>
+              <motion.div
+                className={style.specImg}
+                initial={{
+                  opacity: 0,
+                  scale: 0.6,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    type: "spring",
+                    duration: 1.3,
+                  },
+                }}
+              >
                 <Image src={Specs} alt="specs" placeholder="blur" />
-              </div>
-              <div className={style.specRows}>
+              </motion.div>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 150,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    type: "spring",
+                    duration: 1,
+                  },
+                }}
+                className={style.specRows}
+              >
                 <div className={style.specRowA}>
                   <div className={style.specA}>
                     <Image src={Watch} alt="watch" />
@@ -236,19 +328,33 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <div className={style.future}>
             <div className={style.futureContent}>
-              <div className={style.fImg}>
+              <motion.div
+                className={style.fImg}
+                initial={{
+                  opacity: 0,
+                  x: -400,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    //type: "spring",
+                    duration: 1.6,
+                  },
+                }}
+              >
                 <Image src={Hand} alt="wear the future" placeholder="blur" />
-              </div>
-              <div className={style.fTxt}>
+              </motion.div>
+              <motion.div className={style.fTxt}>
                 <h2>Wear the future of crypto</h2>
                 <button>Pre-Order Now</button>
-              </div>
+              </motion.div>
             </div>
           </div>
 

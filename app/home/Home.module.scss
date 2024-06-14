@@ -73,7 +73,7 @@
     h1 {
       font-size: 4em;
       //border: 1px solid #fff;
-      //line-height: 40px;
+      line-height: 80px;
     }
     p {
       margin: 2em auto;
@@ -84,6 +84,7 @@
     img {
       margin-top: -10px;
       width: 100%;
+      transform: scale(1.1);
     }
   }
   .heroDesc {
@@ -138,6 +139,10 @@
   .designImg {
     position: relative;
     width: 100%;
+    img {
+      // transform: rotate(30deg);
+      transform: scale(1.2);
+    }
   }
   .designTxt {
     margin-left: 0;
@@ -218,6 +223,12 @@
     p {
       margin-top: 0.7em;
       font-size: 1.3em;
+    }
+  }
+  .needsImg {
+    margin: 3em 0;
+    img {
+      transform: scale(1.15);
     }
   }
 }
