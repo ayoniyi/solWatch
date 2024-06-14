@@ -338,7 +338,7 @@ const HomePage = () => {
                 className={style.fImg}
                 initial={{
                   opacity: 0,
-                  x: -400,
+                  x: -200,
                 }}
                 whileInView={{
                   opacity: 1,
