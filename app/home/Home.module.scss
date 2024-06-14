@@ -490,6 +490,7 @@
   }
   .subscribeContent {
     h2 {
+      margin-top: -14px;
       font-size: 2.3em;
       width: 100%;
     }
@@ -502,25 +503,26 @@
   .subscribeBx {
     input {
       width: 95%;
+      height: 56px;
     }
     button {
       margin-top: 1em;
       @include btnRegular(50%);
     }
-    bottom: 2.5em;
+    bottom: 2.1em;
   }
   .subscribeFields {
     width: 95%;
     @include flexRegular(column, center);
     img {
-      top: 1.4em;
+      top: 1em;
       left: 1.2em;
     }
   }
   .subscribeImg {
     img {
       width: 100%;
-      transform: scale(1.4);
+      transform: scale(1.2);
     }
   }
 }
