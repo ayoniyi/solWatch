@@ -100,11 +100,33 @@
 .design {
   //border: 1px solid #fff;
   background: #1f1f1f;
+  @include flexRegular(row, flex-start);
+  position: relative;
+  padding: 3em 0;
 }
 .designImg {
+  position: absolute;
   img {
     width: 100%;
-    max-width: 720px;
+    width: 1320px;
+  }
+  width: 45%;
+  //border: 1px solid #fff;
+}
+.designTxt {
+  width: 65%;
+
+  margin-left: 40%;
+  h2 {
+    font-size: 3.6em;
+    font-family: "Inter";
+    font-weight: 600;
+    width: 80%;
+  }
+  p {
+    font-size: 1.5em;
+    width: 80%;
+    color: #ffffffbd;
   }
 }
 

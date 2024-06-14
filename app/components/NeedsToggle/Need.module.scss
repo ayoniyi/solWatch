@@ -1,0 +1,118 @@
+@import "../../mixins";
+
+.needs {
+  @include flexRegular(column, center);
+}
+.need {
+  border-bottom: 1px solid #515151;
+  margin-bottom: 1.5em;
+}
+.needTop,
+.faqLabel {
+  @include flexRegular(row, space-between);
+  cursor: pointer;
+}
+.needTop .needIcon::before {
+  width: 24px;
+  height: 24px;
+  @include flexRegular(column, center);
+  content: url(./arrow.svg);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #023463;
+  transition: 0.35s ease-in;
+}
+.needTop .activeAcc .needIcon::before {
+  &::before {
+    content: url(./arrow2.svg);
+  }
+}
+
+.needNumber,
+.needIcon {
+  @include flexRegular(column, center);
+  align-items: center;
+  border-radius: 100%;
+  height: 65px;
+  width: 65px;
+  font-size: 2em;
+  background: #292424;
+  margin-bottom: 1em;
+}
+
+.need .needDesc {
+  height: 0;
+  overflow: hidden;
+  transition: 0.35s;
+  overflow-y: hidden;
+}
+.need.activeAcc .needDesc {
+  height: 200px;
+}
+
+// .need.activeAcc .faqLabel::before {
+//   content: url(./arrow.svg);
+//   @include flexRegular(column, flex-end);
+// }
+
+.need .faqLabel {
+  position: relative;
+  padding-left: 5px;
+  //padding: 10px 10px 0 10px;
+  background: none;
+  cursor: pointer;
+  //background: pink;
+}
+.faqLabel {
+  @include flexRegular(row, flex-start);
+  transition: 0.3s ease-in;
+  font-size: 20px;
+}
+.needTitle {
+  //border: 1px solid #fff;
+  margin-left: 20%;
+  h3 {
+    margin-top: -30px;
+    font-size: 2em;
+  }
+}
+.need .faqLabel::before {
+  //border: 1.5px solid #71717a;
+  //border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  @include flexRegular(column, center);
+  content: url(./arrow.svg);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #023463;
+  transition: 0.35s ease-in;
+}
+
+.need.activeAcc .faqLabel::before {
+  content: url(./arrow2.svg);
+  @include flexRegular(column, flex-end);
+}
+
+.need .faqContentsm {
+  position: relative;
+  margin-top: 1em;
+  //padding: 1px;
+  //background: pink;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.35s;
+  overflow-y: hidden;
+  //font-size: 0.91em;
+  padding: 0 0 0 0.6em;
+  width: 90%;
+}
+.need.activeAcc .faqContentsm {
+  height: 350px;
+}

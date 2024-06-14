@@ -20,7 +20,7 @@ import Hand from "./assets/hand.png";
 import Lines from "./assets/sublines.png";
 import Subscribe from "./assets/subscribe.png";
 import Mail from "./assets/mail.svg";
-
+import NeedsToggle from "../components/NeedsToggle/Needs";
 const HomePage = () => {
   return (
     <>
@@ -49,6 +49,15 @@ const HomePage = () => {
             <div className={style.designImg}>
               <Image src={design} alt="Elegant design" placeholder="blur" />
             </div>
+            <div className={style.designTxt}>
+              <h2>Innovation of Crypto Hardware</h2>
+              <p>
+                Solana Watch is a wearable AI device of crypto. It combines
+                blockchain with smartwatch, enabling users to effortlessly and
+                swiftly conduct various transactions anytime, anywhere through
+                AI technology, reflecting the innovation and speed of web3.
+              </p>
+            </div>
           </div>
 
           <div className={style.needs}>
@@ -59,6 +68,7 @@ const HomePage = () => {
               <div className={style.needsImg}>
                 <Image src={Needs} alt="all your needs" placeholder="blur" />
               </div>
+              {/* <NeedsToggle /> */}
             </div>
           </div>
 
