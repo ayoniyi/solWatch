@@ -21,7 +21,7 @@ import Hand from "./assets/hand.png";
 import Lines from "./assets/sublines.png";
 import Subscribe from "./assets/subscribe.png";
 import Mail from "./assets/mail.svg";
-import NeedsToggle from "../components/NeedsToggle/Needs";
+import NeedsT from "../components/NeedsToggle/NeedsTemplate";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import { useEffect } from "react";
@@ -162,6 +162,7 @@ const HomePage = () => {
                 <Image src={Needs} alt="all your needs" placeholder="blur" />
               </div>
               {/* <NeedsToggle /> */}
+              <NeedsT />
             </div>
           </div>
 

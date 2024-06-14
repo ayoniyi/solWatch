@@ -1,0 +1,100 @@
+@import "../../mixins";
+
+.needs {
+  @include flexRegular(column, center);
+  width: 60%;
+  margin: auto;
+}
+.need {
+  border-bottom: 1px solid #515151;
+  margin-bottom: 1.5em;
+}
+.needTop {
+  @include flexRegular(row, space-between);
+  cursor: pointer;
+  //border: 1px solid #fff;
+  margin-bottom: -15px;
+}
+
+.needNumber,
+.needIcon {
+  @include flexRegular(column, center);
+  align-items: center;
+  border-radius: 100%;
+  height: 65px;
+  width: 65px;
+  font-size: 2em;
+  background: #292424;
+  margin-bottom: 1em;
+}
+
+.needTitle {
+  //border: 1px solid #fff;
+  //margin-left: 20%;
+  h3 {
+    margin-top: -20px;
+    font-size: 2em;
+  }
+}
+
+.need .needDesc {
+  //border: 1px solid #fff;
+  //padding: 0 0 0.5em 0;
+  //margin-top: 0.5em;
+  //overflow-y: hidden !important;
+  height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 0;
+  transition: all 0.2s cubic-bezier(0, 1, 0, 1);
+  p {
+    width: 80%;
+    margin: auto;
+    font-size: 1.2em;
+    text-align: center;
+    color: #b8b8b8;
+  }
+}
+
+.needDesc.show {
+  margin-bottom: 1em;
+  //padding: 0.5em 0;
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.2s cubic-bezier(1, 0, 1, 0);
+}
+
+@media (max-width: 824px) {
+  .needs {
+    width: 85%;
+  }
+}
+@media (max-width: 500px) {
+  .needs {
+    width: 95%;
+  }
+  .needTop {
+    margin-bottom: -5px;
+  }
+  .needTitle {
+    h3 {
+      font-size: 1.3em;
+    }
+  }
+  .needNumber,
+  .needIcon {
+    font-size: 1em;
+    height: 45px;
+    width: 45px;
+    p {
+      margin-top: -3px;
+    }
+  }
+  .need .needDesc {
+    p {
+      width: 95%;
+      margin-top: 10px;
+      font-size: 1em;
+    }
+  }
+}

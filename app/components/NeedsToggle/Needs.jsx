@@ -20,7 +20,7 @@ const NeedsToggle = () => {
     <>
       <div className={style.container}>
         <div className={style.needs}>
-          {/* <div nclassName={style.need}>
+          <div className={style.need}>
             <div className={style.faqLabel}>
               <div className={style.needNumber}>
                 <p>1</p>
@@ -36,7 +36,7 @@ const NeedsToggle = () => {
                 the AI.
               </p>
             </div>
-          </div> */}
+          </div>
           {/* <div nclassName={style.need}>
             <div className={style.faqLabel}>
               <div className={style.needNumber}>
