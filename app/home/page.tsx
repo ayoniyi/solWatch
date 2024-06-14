@@ -11,7 +11,8 @@ import NeedsWatch from "./assets/needsWatch.png";
 import NeedsIcons1 from "./assets/needsIcons1.png";
 import NeedsIcons2 from "./assets/needsIcons2.png";
 import Explore from "./assets/explore.png";
-import Specs from "./assets/specs.png";
+import Specs from "./assets/specs.gif";
+import Ellipse from "./assets/Ellipse.png";
 
 import Watch from "./assets/watch.svg";
 import Android from "./assets/android.svg";
@@ -341,10 +342,10 @@ const HomePage = () => {
                     },
                   }}
                 >
-                  Specs
+                  Specifications
                 </motion.h2>
               </div>
-
+              <Image className={style.ellipse} src={Ellipse} alt="shape" />
               <motion.div
                 className={style.specImg}
                 initial={{
@@ -360,7 +361,7 @@ const HomePage = () => {
                   },
                 }}
               >
-                <Image src={Specs} alt="specs" placeholder="blur" />
+                <Image src={Specs} alt="specs" />
               </motion.div>
               <motion.div
                 initial={{
