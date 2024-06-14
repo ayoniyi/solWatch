@@ -1,11 +1,15 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import style from "./Home.module.scss";
 import Image from "next/image";
 
 import heroImg from "./assets/heroImg.png";
 import design from "./assets/watch.png";
-import Needs from "./assets/all.png";
+//import Needs from "./assets/all.png";
+import NeedsWatch from "./assets/needsWatch.png";
+import NeedsIcons1 from "./assets/needsIcons1.png";
+import NeedsIcons2 from "./assets/needsIcons2.png";
 import Explore from "./assets/explore.png";
 import Specs from "./assets/specs.png";
 
@@ -22,14 +26,15 @@ import Lines from "./assets/sublines.png";
 import Subscribe from "./assets/subscribe.png";
 import Mail from "./assets/mail.svg";
 import NeedsT from "../components/NeedsToggle/NeedsTemplate";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import AOS from "aos";
-import { useEffect } from "react";
 
 const HomePage = () => {
   useEffect(() => {
     AOS.init({});
   }, []);
+
+  const [showIcons, setShowIcons] = useState(false);
 
   return (
     <>
@@ -169,7 +174,7 @@ const HomePage = () => {
               >
                 All Your <span>Crypto</span> Needs Only One Watch
               </motion.h2>
-              <motion.div
+              {/* <motion.div
                 className={style.needsImg}
                 initial={{
                   scale: 0.7,
@@ -185,8 +190,105 @@ const HomePage = () => {
                 }}
               >
                 <Image src={Needs} alt="all your needs" placeholder="blur" />
-              </motion.div>
-              {/* <NeedsToggle /> */}
+              </motion.div> */}
+              <div className={style.needsImgs}>
+                <AnimatePresence mode="wait">
+                  {showIcons && (
+                    <motion.div
+                      className={style.needsIcons1}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={{
+                        hidden: {
+                          opacity: 0,
+                          scale: 0.8,
+                          x: 100,
+                        },
+                        visible: {
+                          opacity: 1,
+                          scale: 1,
+                          x: 0,
+                          transition: {
+                            type: "spring",
+                            duration: 1,
+                          },
+                        },
+                        exit: {
+                          opacity: 0,
+                          scale: 0.8,
+                          x: 100,
+                          transition: {
+                            duration: 0.6,
+                          },
+                        },
+                      }}
+                    >
+                      <Image src={NeedsIcons1} alt="icons" placeholder="blur" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <motion.div
+                  className={style.needsImg}
+                  initial={{
+                    // scale: 0.7,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    // scale: 1,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      duration: 1,
+                    },
+                  }}
+                >
+                  <Image
+                    onMouseEnter={() => setShowIcons(true)}
+                    onMouseLeave={() => setShowIcons(false)}
+                    src={NeedsWatch}
+                    alt="all your needs"
+                    placeholder="blur"
+                  />
+                </motion.div>
+                <AnimatePresence mode="wait">
+                  {showIcons && (
+                    <motion.div
+                      className={style.needsIcons2}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={{
+                        hidden: {
+                          opacity: 0,
+                          scale: 0.8,
+                          x: -100,
+                        },
+                        visible: {
+                          opacity: 1,
+                          scale: 1,
+                          x: 0,
+                          transition: {
+                            type: "spring",
+                            duration: 1,
+                          },
+                        },
+                        exit: {
+                          opacity: 0,
+                          scale: 0.8,
+                          x: -100,
+                          transition: {
+                            duration: 0.6,
+                          },
+                        },
+                      }}
+                    >
+                      <Image src={NeedsIcons2} alt="icons" placeholder="blur" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
               <NeedsT />
             </div>
           </div>
