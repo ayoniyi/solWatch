@@ -110,17 +110,20 @@
   img {
     width: 100%;
     //width: 1320px;
-    transform: scale(1.25);
+    transform: scale(1.45);
+    max-width: 600px;
   }
   width: 45%;
   //border: 1px solid #fff;
 }
 .designTxt {
   width: 65%;
-  padding: 2em 0;
+  padding: 3.8em 0;
   //margin-left: 40%;
+  margin-left: -1.5%;
   h2 {
-    font-size: 3.6em;
+    font-size: 3.8em;
+    //font-size: 55px;
     font-family: "Inter";
     font-weight: 600;
     width: 80%;
@@ -129,6 +132,24 @@
     font-size: 1.5em;
     width: 80%;
     color: #ffffffbd;
+  }
+}
+@media (min-width: 1450px) {
+  .designImg {
+    //border: 1px solid #fff;
+    img {
+      transform: scale(1.25);
+    }
+  }
+  .designTxt {
+    padding: 6em 0;
+    margin-left: -8%;
+    h2 {
+      font-size: 3.4em;
+    }
+    p {
+      width: 65%;
+    }
   }
 }
 @media (max-width: 820px) {
@@ -228,7 +249,7 @@
   //z-index: 1;
   img {
     width: 100%;
-    max-width: 1100px;
+    max-width: 900px;
     margin-top: 1em;
     //border: 1px solid #fff;
   }
@@ -243,6 +264,18 @@
     // max-width: 244px;
     // max-height: 619px;
     //border: 1px solid #fff;
+  }
+}
+@media (min-width: 1450px) {
+  .needsIcons1,
+  .needsIcons2 {
+    img {
+      width: 65%;
+    }
+  }
+  .needsIcons2 {
+    right: -5em;
+    @include flexRegular(row, flex-end);
   }
 }
 @media (max-width: 1024px) {

@@ -246,8 +246,8 @@ const HomePage = () => {
                   }}
                 >
                   <Image
-                    onMouseEnter={() => setShowIcons(true)}
-                    onMouseLeave={() => setShowIcons(false)}
+                    onMouseEnter={() => setShowIcons(!showIcons)}
+                    onMouseLeave={() => setShowIcons(!showIcons)}
                     src={NeedsWatch}
                     alt="all your needs"
                     placeholder="blur"
