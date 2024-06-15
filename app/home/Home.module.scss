@@ -658,3 +658,13 @@
     }
   }
 }
+
+@media (min-width: 1450px) {
+  .subscribeFields {
+    width: 55%;
+    //border: 1px solid #fff;
+  }
+  .subscribeBx {
+    bottom: 15%;
+  }
+}
