@@ -68,18 +68,18 @@ const HomePage = () => {
               animate="visible"
               variants={{
                 hidden: {
-                  scale: 0.5,
+                  // scale: 0.5,
                   opacity: 0,
                   y: 200,
                 },
                 visible: {
-                  scale: 1,
+                  // scale: 1,
                   opacity: 1,
                   y: 0,
                   transition: {
                     type: "spring",
                     delay: 1.5,
-                    duration: 1.3,
+                    duration: 1.7,
                   },
                 },
               }}
