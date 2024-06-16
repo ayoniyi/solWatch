@@ -11,7 +11,7 @@ import NeedsWatch from "./assets/needsWatch.png";
 import NeedsIcons1 from "./assets/needsIcons1.png";
 import NeedsIcons2 from "./assets/needsIcons2.png";
 import Explore from "./assets/explore.png";
-import Specs from "./assets/specs.gif";
+import Specs from "./assets/specs2.gif";
 import Ellipse from "./assets/Ellipse.png";
 
 import Watch from "./assets/watch.svg";
