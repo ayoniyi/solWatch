@@ -465,11 +465,11 @@ const HomePage = () => {
                 className={style.fImg}
                 initial={{
                   opacity: 0,
-                  x: -200,
+                  //x: -200,
                 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
+                  //sx: 0,
                   transition: {
                     //type: "spring",
                     duration: 1.6,
