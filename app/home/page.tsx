@@ -23,6 +23,7 @@ import Charge from "./assets/charging.svg";
 import Battery from "./assets/battery.svg";
 
 import Hand from "./assets/hand.png";
+import Future from "./assets/future2.jpg";
 import Lines from "./assets/sublines.png";
 import Subscribe from "./assets/subscribe.png";
 import Mail from "./assets/mail.svg";
@@ -101,13 +102,13 @@ const HomePage = () => {
 
               //data-aos-offset="500"
             >
-              <p>
+              {/* <p>
                 Introducing the Solana Watch — a cutting-edge timepiece designed
                 to seamlessly blend advanced technology with sophisticated
                 style.This sleek and stylish watch seamlessly blends high
                 fashion with advanced technology, reflecting the innovation and
                 speed of the Solana blockchain.{" "}
-              </p>
+              </p> */}
             </motion.div>
           </div>
 
@@ -436,7 +437,7 @@ const HomePage = () => {
           </div>
 
           <div className={style.future}>
-            <div className={style.futureContent}>
+            {/* <div className={style.futureContent}>
               <motion.div
                 className={style.fImg}
                 initial={{
@@ -456,6 +457,28 @@ const HomePage = () => {
               </motion.div>
               <motion.div className={style.fTxt}>
                 <h2>Wear the future of crypto</h2>
+                <button>Pre-Order Now</button>
+              </motion.div>
+            </div> */}
+            <div className={style.futureContent}>
+              <motion.div
+                className={style.fImg}
+                initial={{
+                  opacity: 0,
+                  x: -200,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    //type: "spring",
+                    duration: 1.6,
+                  },
+                }}
+              >
+                <Image src={Future} alt="wear the future" placeholder="blur" />
+              </motion.div>
+              <motion.div className={style.fBtn}>
                 <button>Pre-Order Now</button>
               </motion.div>
             </div>

@@ -5,7 +5,7 @@ import Logo from "@/public/logo.svg";
 import Image from "next/image";
 
 import Tg from "./tg.svg";
-import Fb from "./facebook.svg";
+import Discord from "./discord.svg";
 import X from "./x.svg";
 
 const Footer = () => {
@@ -39,7 +39,7 @@ const Footer = () => {
                 <Image src={Tg} alt="telegram" />
               </Link>
               <Link href="#" className={style.social}>
-                <Image src={Fb} alt="facebook" />
+                <Image className={style.disc} src={Discord} alt="discord" />
               </Link>
             </div>
           </div>

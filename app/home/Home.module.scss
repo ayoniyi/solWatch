@@ -513,17 +513,33 @@
 
 //future div
 .future {
-  background: #1f1f1f;
+  // background: #1f1f1f;
   padding: 1.5em 0;
+}
+.futureContent {
+  @include flexRegular(row, space-between);
+  position: relative;
 }
 .fImg {
   img {
     width: 100%;
-    max-width: 1190px;
+    //max-width: 1190px;
+  }
+}
+.fBtn {
+  position: absolute;
+  right: 2em;
+  //bottom: 8em;
+  button {
+    margin: 1em 0;
+    @include btnRegular(10vw);
+    min-width: 170px;
+    max-width: 300px;
   }
 }
 .fTxt {
   margin: 1.5em 0;
+  padding-right: 1em;
   text-align: center;
   h2 {
     font-size: 3.6em;
