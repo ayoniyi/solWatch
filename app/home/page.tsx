@@ -61,7 +61,8 @@ const HomePage = () => {
               }}
             >
               <h1>Solana Watch</h1>
-              <p>The First AI Wearables of Crypto</p>
+              {/* <p>The First AI Wearables of Crypto</p> */}
+              <p>The Premier AI Wearable for the Solana Key Players.</p>
             </motion.div>
             <motion.div
               className={style.heroImg}
@@ -151,12 +152,12 @@ const HomePage = () => {
               //   //margin: "-200px",
               // }}
             >
-              <h2>Innovation of Crypto Hardware</h2>
+              <h2>Pioneering Crypto Hardware</h2>
               <p>
-                Solana Watch is a wearable AI device of crypto. It combines
-                blockchain with smartwatch, enabling users to effortlessly and
-                swiftly conduct various transactions anytime, anywhere through
-                AI technology, reflecting the innovation and speed of web3.
+                Experience the cutting-edge fusion of blockchain technology and
+                wearable devices with Solana Watch, enabling seamless
+                transactions and never before seen Ease of access through AI
+                integration.
               </p>
             </motion.div>
           </div>
@@ -174,7 +175,8 @@ const HomePage = () => {
                   },
                 }}
               >
-                All Your <span>Crypto</span> Needs Only One Watch
+                {/* All Your <span>Crypto</span> Needs Only One Watch */}
+                Unmatched <span>Crypto</span> Features in One Device
               </motion.h2>
               {/* <motion.div
                 className={style.needsImg}
@@ -195,40 +197,52 @@ const HomePage = () => {
               </motion.div> */}
               <div className={style.needsImgs}>
                 <AnimatePresence mode="wait">
-                  {showIcons && (
-                    <motion.div
-                      className={style.needsIcons1}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      variants={{
-                        hidden: {
-                          opacity: 0,
-                          scale: 0.8,
-                          x: 100,
-                        },
-                        visible: {
-                          opacity: 1,
-                          scale: 1,
-                          x: 0,
-                          transition: {
-                            type: "spring",
-                            duration: 1,
-                          },
-                        },
-                        exit: {
-                          opacity: 0,
-                          scale: 0.8,
-                          x: 100,
-                          transition: {
-                            duration: 0.6,
-                          },
-                        },
-                      }}
-                    >
-                      <Image src={NeedsIcons1} alt="icons" placeholder="blur" />
-                    </motion.div>
-                  )}
+                  <motion.div
+                    className={style.needsIcons1}
+                    // initial="hidden"
+                    // animate="visible"
+                    // exit="exit"
+                    // variants={{
+                    //   hidden: {
+                    //     opacity: 0,
+                    //     scale: 0.8,
+                    //     x: 100,
+                    //   },
+                    //   visible: {
+                    //     opacity: 1,
+                    //     scale: 1,
+                    //     x: 0,
+                    //     transition: {
+                    //       type: "spring",
+                    //       duration: 1,
+                    //     },
+                    //   },
+                    //   exit: {
+                    //     opacity: 0,
+                    //     scale: 0.8,
+                    //     x: 100,
+                    //     transition: {
+                    //       duration: 0.6,
+                    //     },
+                    //   },
+                    // }}
+                    initial={{
+                      opacity: 0,
+                      scale: 0.8,
+                      x: 100,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      scale: 1,
+                      x: 0,
+                      transition: {
+                        type: "spring",
+                        duration: 1,
+                      },
+                    }}
+                  >
+                    <Image src={NeedsIcons1} alt="icons" placeholder="blur" />
+                  </motion.div>
                 </AnimatePresence>
 
                 <motion.div
@@ -247,48 +261,60 @@ const HomePage = () => {
                   }}
                 >
                   <Image
-                    onMouseEnter={() => setShowIcons(!showIcons)}
-                    onMouseLeave={() => setShowIcons(!showIcons)}
+                    //onMouseEnter={() => setShowIcons(!showIcons)}
+                    // onMouseLeave={() => setShowIcons(!showIcons)}
                     src={NeedsWatch}
                     alt="all your needs"
                     placeholder="blur"
                   />
                 </motion.div>
                 <AnimatePresence mode="wait">
-                  {showIcons && (
-                    <motion.div
-                      className={style.needsIcons2}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      variants={{
-                        hidden: {
-                          opacity: 0,
-                          scale: 0.8,
-                          x: -100,
-                        },
-                        visible: {
-                          opacity: 1,
-                          scale: 1,
-                          x: 0,
-                          transition: {
-                            type: "spring",
-                            duration: 1,
-                          },
-                        },
-                        exit: {
-                          opacity: 0,
-                          scale: 0.8,
-                          x: -100,
-                          transition: {
-                            duration: 0.6,
-                          },
-                        },
-                      }}
-                    >
-                      <Image src={NeedsIcons2} alt="icons" placeholder="blur" />
-                    </motion.div>
-                  )}
+                  <motion.div
+                    className={style.needsIcons2}
+                    // initial="hidden"
+                    // animate="visible"
+                    // exit="exit"
+                    // variants={{
+                    //   hidden: {
+                    //     opacity: 0,
+                    //     scale: 0.8,
+                    //     x: -100,
+                    //   },
+                    //   visible: {
+                    //     opacity: 1,
+                    //     scale: 1,
+                    //     x: 0,
+                    //     transition: {
+                    //       type: "spring",
+                    //       duration: 1,
+                    //     },
+                    //   },
+                    //   exit: {
+                    //     opacity: 0,
+                    //     scale: 0.8,
+                    //     x: -100,
+                    //     transition: {
+                    //       duration: 0.6,
+                    //     },
+                    //   },
+                    // }}
+                    initial={{
+                      opacity: 0,
+                      scale: 0.8,
+                      x: -100,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      scale: 1,
+                      x: 0,
+                      transition: {
+                        type: "spring",
+                        duration: 1,
+                      },
+                    }}
+                  >
+                    <Image src={NeedsIcons2} alt="icons" placeholder="blur" />
+                  </motion.div>
                 </AnimatePresence>
               </div>
               <NeedsT />
@@ -490,7 +516,11 @@ const HomePage = () => {
             </div>
 
             <div className={style.subscribeContent}>
-              <h2>Stay in the Loop: Subscribe for Exclusive Updates!</h2>
+              {/* <h2>Stay in the Loop: Subscribe for Exclusive Updates!</h2> */}
+              <h2>
+                Stay ahead in the crypto world with Solana Watch. Pre-order now
+                and subscribe for exclusive updates.
+              </h2>
               <div className={style.subscribeImg}>
                 <Image
                   src={Subscribe}

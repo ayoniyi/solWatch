@@ -2,12 +2,14 @@
 
 .needs {
   @include flexRegular(column, center);
-  width: 60%;
+  width: 100%;
   margin: auto;
+  //border: 2px solid #fff;
 }
 .need {
   border-bottom: 1px solid #515151;
   margin-bottom: 1.5em;
+  width: 100%;
 }
 .needTop {
   @include flexRegular(row, space-between);

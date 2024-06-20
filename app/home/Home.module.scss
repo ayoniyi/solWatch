@@ -32,7 +32,7 @@
     background-clip: text;
     color: transparent;
     // border: 1px solid #fff;
-    width: 50%;
+    width: 80%;
     margin: auto;
     font-size: 1.5em;
   }
@@ -77,7 +77,7 @@
     }
     p {
       margin: 2em auto;
-      width: 75%;
+      width: 85%;
     }
   }
   .heroImg {
@@ -110,7 +110,7 @@
   img {
     width: 100%;
     //width: 1320px;
-    transform: scale(1.45);
+    transform: scale(1.35);
     max-width: 600px;
   }
   width: 45%;
@@ -138,11 +138,11 @@
   .designImg {
     //border: 1px solid #fff;
     img {
-      transform: scale(1.25);
+      transform: scale(1.2);
     }
   }
   .designTxt {
-    padding: 6em 0;
+    padding: 6.7em 0;
     margin-left: -8%;
     h2 {
       font-size: 3.4em;
@@ -270,11 +270,12 @@
   .needsIcons1,
   .needsIcons2 {
     img {
-      width: 65%;
+      width: 60%;
     }
   }
   .needsIcons2 {
-    right: -5em;
+    right: -7em;
+    bottom: -2em;
     @include flexRegular(row, flex-end);
   }
 }
@@ -296,6 +297,7 @@
   }
   .needsIcons2 {
     right: -8em;
+
     img {
       width: 80%;
     }
@@ -589,10 +591,11 @@
   z-index: 2;
   @include flexRegular(column, center);
   h2 {
-    font-size: 3.8em;
+    margin-top: 1em;
+    font-size: 3.2em;
     font-family: "Inter";
     font-weight: 600;
-    width: 62%;
+    width: 80%;
     text-align: center;
   }
 }
@@ -650,8 +653,9 @@
   .subscribeContent {
     h2 {
       margin-top: -14px;
-      font-size: 2.3em;
+      font-size: 1.3em;
       width: 100%;
+      margin-bottom: 2em;
     }
   }
   .subLines {

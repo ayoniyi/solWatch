@@ -55,20 +55,20 @@ const NeedsToggle = () => {
 
 const data = [
   {
-    title: "Trading AI Assistant",
-    description: `Voice-controlled AI trading assistant, easily set price alerts, establish trading plans, making trading operations simpler with the AI.`,
+    title: "AI Trading Assistant",
+    description: `Utilize voice control to set price alerts and develop trading strategies.`,
   },
   {
     title: "dApp/App Store",
-    description: `Experience the diverse range of dApps within the Solana ecosystem in the dApp Store, or download the required applications from the App Store, seamlessly transitioning from Web2 to Web3.`,
+    description: `Access a diverse range of Solana ecosystem dApps and Web2 applications.`,
   },
   {
-    title: "DeFi System",
-    description: `Whether in the crypto or real life, you can earn rewards by using Solana Watch, unlock the new DeFi experience from now.`,
+    title: "DeFi Integration",
+    description: `Earn crypto rewards and real-life benefits.`,
   },
   {
-    title: "Phone Connectivity",
-    description: `Supporting connectivity with mainstream smartphones, Solana Watch enables receive and reply messages from phone, saving time and increasing efficiency.`,
+    title: "Smartphone Connectivity",
+    description: `Effortlessly sync and manage messages.`,
   },
 ];
 
