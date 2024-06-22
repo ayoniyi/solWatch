@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import style from "./Home.module.scss";
 import Image from "next/image";
 
-import heroImg from "./assets/heroImg.png";
+import heroImg from "./assets/watchNew2.png";
 import design from "./assets/watch.png";
 //import Needs from "./assets/all.png";
 import NeedsWatch from "./assets/needsWatch.png";
@@ -22,7 +22,7 @@ import Bluetooth from "./assets/bluettoth.svg";
 import Charge from "./assets/charging.svg";
 import Battery from "./assets/battery.svg";
 
-import Hand from "./assets/hand.png";
+//import Hand from "./assets/hand.png";
 import Future from "./assets/future2.jpg";
 import Lines from "./assets/sublines.png";
 import Subscribe from "./assets/subscribe.png";

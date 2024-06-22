@@ -40,7 +40,7 @@
 .heroImg {
   @include flexRegular(column, center);
   img {
-    margin-top: -50px;
+    margin-top: -100px;
     //border: 1px solid #fff;
     width: 93%;
     max-width: 1360px;
@@ -48,7 +48,7 @@
 }
 .heroDesc {
   width: 75%;
-  margin: 4em auto;
+  margin: 4em auto -5em auto;
   text-align: center;
   p {
     font-weight: normal;
