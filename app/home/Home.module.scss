@@ -63,6 +63,11 @@
       font-size: 6.9em;
     }
   }
+  .heroImg {
+    img {
+      margin-top: 0.5em;
+    }
+  }
   .heroDesc {
     width: 80%;
   }
@@ -84,10 +89,11 @@
     img {
       margin-top: -10px;
       width: 100%;
-      transform: scale(1.1);
+      transform: scale(1.4);
     }
   }
   .heroDesc {
+    margin: 4em auto -1em auto;
     width: 95%;
     //border: 1px solid #fff;
     p {
