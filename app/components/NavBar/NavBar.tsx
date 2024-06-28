@@ -40,7 +40,7 @@ const NavBar = () => {
             <Image src={Logo} alt="SolWatch" /> {/*change to text? */}
           </Link>
           <div className={style.links}>
-            <Link href="#">
+            <Link href="/">
               <p>Home</p>
             </Link>
             <Link href="#">
